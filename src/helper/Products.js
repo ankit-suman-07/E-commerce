@@ -10,7 +10,7 @@ export const PRODUCTS = [
         delDate: "12/34/5",
         owner: "Bill Gates",
         rating: 5,
-        tags: ["sponsored", "", "", ""],
+        tags: ["all", "", "island", ""],
     },
     {
         id: 2,
@@ -21,7 +21,7 @@ export const PRODUCTS = [
         delDate: "12/34/5",
         owner: "Mukesh Ambani",
         rating: 5,
-        tags: ["sponsored", "", "", ""],
+        tags: ["all", "", "rare", ""],
     },
     {
         id: 3,
@@ -32,7 +32,7 @@ export const PRODUCTS = [
         delDate: "10/02/5",
         owner: "Mark Zucherberg",
         rating: 5,
-        tags: ["sponsored", "", "", ""],
+        tags: ["all", "", "island", ""],
     },
     {
         id: 4,
@@ -43,7 +43,7 @@ export const PRODUCTS = [
         delDate: "10/02/5",
         owner: "Amancio Ortago",
         rating: 5,
-        tags: ["sponsored", "", "", ""],
+        tags: ["all", "", "space", ""],
     },
     {
         id: 5,
@@ -54,7 +54,7 @@ export const PRODUCTS = [
         delDate: "10/02/5",
         owner: "Elon Musk",
         rating: 5,
-        tags: ["sponsored", "", "", ""],
+        tags: ["all", "", "space", ""],
     },
     {
         id: 6,
@@ -65,7 +65,7 @@ export const PRODUCTS = [
         delDate: "12/34/5",
         owner: "Mukesh Ambani",
         rating: 5,
-        tags: ["sponsored", "", "", ""],
+        tags: ["all", "", "island", ""],
     },
     {
         id: 7,
@@ -76,7 +76,7 @@ export const PRODUCTS = [
         delDate: "12/34/5",
         owner: "Bill Gates",
         rating: 5,
-        tags: ["sponsored", "", "", ""],
+        tags: ["all", "", "", "rare"],
     },
     {
         id: 8,
@@ -87,6 +87,6 @@ export const PRODUCTS = [
         delDate: "10/02/5",
         owner: "Elon Musk",
         rating: 5,
-        tags: ["sponsored", "", "", ""],
+        tags: ["all", "", "", "rare"],
     },
 ];
