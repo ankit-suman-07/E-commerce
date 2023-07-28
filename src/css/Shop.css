@@ -1,10 +1,70 @@
+.shop-page {
+    min-height: calc(100vh - 100px);
+    margin-bottom: 10px;
+}
+
+.filter-search {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 20px 10px 20px;
+  height: 30px;
+}
+
+.all, .rare, .island, .active-filter {
+  width: 60px;
+  padding: 2px;
+  margin-right: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  background-color: #ffff;
+  border: 2px solid #333333;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.active-filter {
+background-color: #333333;
+color: #ffff;
+}
+
+.all:hover, .rare:hover, .island:hover {
+  background-color: #333333;
+  color: #ffff;
+  cursor: pointer;
+}
+
+.search-div {
+  /* border: 2px solid black; */
+  border-radius: 10px;
+  display: flex;
+}
+
+.search-text {
+  height: 90%;
+  padding-left: 10px;
+  border-radius: 10px 0 0 10px;
+  border: 2px solid black;
+}
+
+
+.search-btn {
+  height: 100%;
+  width: 40px;
+  border: 2px solid;
+  border-radius: 0 10px 10px 0;
+}
+
+.search-btn:hover {
+  cursor: pointer;
+}
+
 .products {
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 10px;
     margin: 0 20px 0 20px;
 }
-
 
 
 @media only screen and (max-width: 1350px) {

@@ -4,7 +4,7 @@ export const PRODUCTS = [
     {
         id: 1,
         productName: "IPhone",
-        price: 999.0,
+        price: 912399.765,
         productImage: demo,
         timeLimit: "56",
         delDate: "12/34/5",

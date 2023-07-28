@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 .product-card {
-    border: 1px solid black;
+    border: 2px solid #333333;
     /* margin: 0 50px 10px 50px; */
     display: flex;  
-    font-family: 'Poppins', sans-serif;  
+    font-family: 'Poppins', sans-serif; 
+    border-radius: 2px; 
 }
 
 .product-image {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 10px;
     width: 200px;
     height: 200px;
@@ -21,7 +22,7 @@
 }
 
 .product-info {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: calc(100% - 200px);
     padding: 10px;
     display: flex;
@@ -35,11 +36,22 @@
     /* border: 1px solid black; */
     font-size: 20px;
     font-weight: 600;
+    border-bottom: 2px solid grey;
 }
 
 .prod-cost {
     font-size: 25px;
     font-weight: 800;
+    color: #333333;
+    display: flex;
+}
+
+.currency {
+    font-size: 12px;
+    display: flex;
+    padding-right: 5px;
+    margin-top: 5px;
+    /* border: 1px solid black; */
 }
 
 .prod-time, .prod-date {
@@ -49,6 +61,21 @@
 .prod-owner {
     font-size: 12px;
     font-weight: 600;
+}
+
+.prod-btn {
+    width: 50%;
+    padding: 5px;
+    border: 2px solid orange;
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 600; 
+    background-color: #ffff;
+    transition: 0.3s;
+}
+
+.prod-btn:hover {
+    background-color: orange;
+    color: #ffff;
 }
 
 @media only screen and (max-width: 700px) {

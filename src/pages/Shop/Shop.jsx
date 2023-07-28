@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { PRODUCTS } from "../../helper/Products";
+import SearchIcon from '@mui/icons-material/Search';
 import { Product } from "./Product";
 import "../../css/Shop.css";
 
@@ -42,24 +43,28 @@ export const Shop = () => {
               island
           </button>
         </div>
-        <div className="search-btn">
+        <div className="search-div">
           <input
             type="text"
             value={searchKeyword} 
             onChange={(e) => setSearchKeyword(e.target.value)} 
+            className="search-text"
           />
-          <button onClick={handleSearch}>Search</button> 
+          <button onClick={handleSearch} className="search-btn" >
+            <SearchIcon />  
+          </button> 
         </div>
       </div>
       <div className="products">
         {
           PRODUCTS.map((product) => {
             if((product.tags).includes(filter) && (product.productName).includes(searchFilter)) {
-                console.log(filter);
-                console.log(searchFilter);
                 return (
                   <Product data={product} />
                 );
+            }
+            else {
+              return null;
             }
           
           })}
