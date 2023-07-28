@@ -1,0 +1,26 @@
+.bill-total {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+br {
+    height: 5px;
+    background-color: red;
+    color: aqua;
+}
+
+.bill-subtotal, .bill-taxes, .bill-membership, .bill-total-amount {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bill-total-amount {
+    font-weight: 600;
+    border-top: 2px solid grey;
+    margin: 10px 0 10px 0;
+    padding: 10px 0 10px 0;
+    border-bottom: 2px solid grey;
+}

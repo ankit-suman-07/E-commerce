@@ -7,9 +7,12 @@ export const CartItem = (props) => {
   const { cartItems, addToCart, removeFromCart, updateCartItemCount } =
     useContext(ShopContext);
 
-    const formattedNumber = (price * cartItems[id]).toLocaleString({
-      style: "currency",
-      currency: "USD",
+    
+    const formattedValue = (price * cartItems[id]).toLocaleString('en-US', {
+      // style: 'currency',
+      // currency: 'USD',
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
     });
 
   return (
@@ -19,8 +22,10 @@ export const CartItem = (props) => {
       </div>
       <div className="cart-description">
           <span className="cart-prod-name">{productName}</span>
+          <span className="cart-prod-ship">Eligible for FREE Shipping</span>
+          <span className="cart-prod-return">Return/Replacement within 10 days</span>
           
-          <span className="cart-prod-date"> Delivery on : <b>{delDate}</b></span>
+          <span className="cart-prod-date"> Delivery by : <b>{delDate}</b></span>
         <div className="count-handler">
           <button onClick={() => removeFromCart(id)} className="alter-btn" > - </button>
           <input
@@ -33,7 +38,7 @@ export const CartItem = (props) => {
         </div>
       </div>
       <div className="cart-cost" > 
-        <span className="cart-prod-cost"> +$ {formattedNumber }</span>
+        <span className="cart-prod-cost"> +$ {formattedValue }</span>
       </div>
     </div>
   );
