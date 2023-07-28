@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ShopContext } from "../../context/ShopContext";
+import { Rating } from "../../components/Rating";
 import "../../css/Product.css";
 
 export const Product = (props) => {
@@ -77,6 +78,7 @@ export const Product = (props) => {
         </span>
         <span className="prod-date"> and get it by <b>{deliveryDate}</b></span>
         <span className="prod-rating"> Rating: {rating}</span>
+        <Rating  rating={rating} />
         <span className="prod-owner">
           Also owned by <b>{owner}</b>
         </span>

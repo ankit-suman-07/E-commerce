@@ -9,7 +9,7 @@ export const PRODUCTS = [
         timeLimit: "56",
         delDate: "12/34/5",
         owner: "Bill Gates",
-        rating: 5,
+        rating: 4.2,
         tags: ["all", "", "island", ""],
     },
     {
@@ -20,7 +20,7 @@ export const PRODUCTS = [
         timeLimit: "32",
         delDate: "12/34/5",
         owner: "Mukesh Ambani",
-        rating: 5,
+        rating: 4.1,
         tags: ["all", "", "rare", ""],
     },
     {
@@ -31,7 +31,7 @@ export const PRODUCTS = [
         timeLimit: "12",
         delDate: "10/02/5",
         owner: "Mark Zucherberg",
-        rating: 5,
+        rating: 3.8,
         tags: ["all", "", "island", ""],
     },
     {
@@ -42,7 +42,7 @@ export const PRODUCTS = [
         timeLimit: "12",
         delDate: "10/02/5",
         owner: "Amancio Ortago",
-        rating: 5,
+        rating: 4.6,
         tags: ["all", "", "space", ""],
     },
     {
@@ -53,7 +53,7 @@ export const PRODUCTS = [
         timeLimit: "12",
         delDate: "10/02/5",
         owner: "Elon Musk",
-        rating: 5,
+        rating: 4.7,
         tags: ["all", "", "space", ""],
     },
     {
@@ -75,7 +75,7 @@ export const PRODUCTS = [
         timeLimit: "56",
         delDate: "12/34/5",
         owner: "Bill Gates",
-        rating: 5,
+        rating: 4.6,
         tags: ["all", "", "", "rare"],
     },
     {

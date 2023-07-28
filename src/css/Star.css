@@ -1,0 +1,22 @@
+.star {
+   
+    height: 20px;
+    /* border: 1px solid black; */
+    /* margin: 5px; */
+    overflow: hidden;
+}
+
+.inner-star {
+    /* background-color: red; */
+    width: 20px;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.star-image {
+    color: goldenrod;
+    width: 19px;
+}
