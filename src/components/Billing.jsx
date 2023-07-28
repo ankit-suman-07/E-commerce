@@ -1,6 +1,8 @@
 import {React, useContext } from "react";
 import { ShopContext } from "../context/ShopContext";
 import { useNavigate } from "react-router-dom";
+import { Address } from "./Address";
+import { CheckOut } from "./CheckOut";
 import "../css/Billing.css";
 
 export const Billing = (props) => {
@@ -46,16 +48,21 @@ export const Billing = (props) => {
             </div>
             
         </div>
+        <div className="bill-address" >
+            <Address />
+        </div>
+        <div className="checkout-div" >
         <button
             onClick={() => {
               checkout();
               navigate("/checkout");
             }}
           >
-            {" "}
-            Checkout{" "}
+            CheckOut
           </button>
-          <button onClick={() => navigate("/")}> Continue Shopping </button>
+        </div>
+        
+          {/* <button onClick={() => navigate("/")}> Continue Shopping </button> */}
     </div>
   )
 }

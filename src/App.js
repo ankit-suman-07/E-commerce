@@ -3,6 +3,7 @@ import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { Shop } from "./pages/Shop/Shop";
 import { Cart } from "./pages/Cart/Cart";
+import { CheckOut } from "./components/CheckOut";
 import { ShopContextProvider } from "./context/ShopContext";
 import './App.css';
 
@@ -16,6 +17,7 @@ function App() {
             <Route path="/" element={<Shop />} />
             {/* <Route path="/contact" element={<Contact />} /> */}
             <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<CheckOut />} />
           </Routes>
           <Footer />
         </Router>

@@ -1,9 +1,19 @@
 .cart {
+    
     min-height: calc(100vh - 120px);
     margin: 0 50px 0 50px;
     display: flex;
     justify-content: space-between;
     
+}
+
+.cart-heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
 }
 
 .cart-products {
@@ -13,12 +23,44 @@
 
 .cart-bill {
     width: 30%;
-    border: 2px solid black;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
     margin: 10px 0 10px 0;
     padding: 10px;
 }
 
 .checkout {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     width: 30%;
+}
+
+.empty-cart {
+    min-height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+
+.empty-icon {
+    font-size: 100px;
+    color: red;
+}
+
+.empty-text {
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.empty-btn {
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+    border: 2px solid #333333;
+    background-color: #ffff;
+}
+
+.empty-btn:hover {
+    background-color: #333333;
+    color: #ffff;
 }

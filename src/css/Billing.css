@@ -1,3 +1,11 @@
+.billing {
+    height: calc(100vh - 200px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+}
+
 .bill-total {
     /* border: 1px solid black; */
     display: flex;
@@ -6,11 +14,7 @@
     font-size: 15px;
 }
 
-br {
-    height: 5px;
-    background-color: red;
-    color: aqua;
-}
+
 
 .bill-subtotal, .bill-taxes, .bill-membership, .bill-total-amount {
     display: flex;
@@ -24,3 +28,4 @@ br {
     padding: 10px 0 10px 0;
     border-bottom: 2px solid grey;
 }
+
