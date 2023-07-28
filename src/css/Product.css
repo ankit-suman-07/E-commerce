@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.product-card {
+    border: 1px solid black;
+    /* margin: 0 50px 10px 50px; */
+    display: flex;  
+    font-family: 'Poppins', sans-serif;  
+}
+
+.product-image {
+    border: 1px solid black;
+    padding: 10px;
+    width: 200px;
+    height: 200px;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-info {
+    border: 1px solid black;
+    width: calc(100% - 200px);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.prod-name {
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid black; */
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.prod-cost {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.prod-time, .prod-date {
+    font-size: 12px;
+}
+
+.prod-owner {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 700px) {
+    .product-card {
+        flex-direction: column;
+    }
+}
