@@ -1,6 +1,6 @@
 .cart {
     
-    min-height: calc(100vh - 120px);
+    min-height: calc(100vh);
     margin: 0 50px 0 50px;
     display: flex;
     justify-content: space-between;

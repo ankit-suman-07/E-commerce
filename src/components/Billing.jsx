@@ -1,8 +1,8 @@
 import React, { useState, useContext, createContext } from "react";
 import { ShopContext } from "../context/ShopContext";
 import { useNavigate } from "react-router-dom";
-import { Address } from "./Address";
 import { PaymentOption } from "./PaymentOption";
+import {CheckOut} from "./CheckOut";
 import "../css/Billing.css";
 
 
@@ -12,7 +12,15 @@ export const Billing = (props) => {
   const { checkout } = useContext(ShopContext);
   const navigate = useNavigate();
 
-  const [selectedAddress, setSelectedAddress] = useState("");
+  const [name, setName] = useState("");
+  const [streetName, setStreetName] = useState("");
+  const [city, setCity] = useState("");
+  const [pinCode, setPinCode] = useState("");
+  const [state, setState] = useState("");
+  const [country, setCountry] = useState("");
+
+  const [selectedPayment, setSelectedPayment] = useState("");
+  const [checkoutBtn, setCheckoutBtn] = useState(false);
 
   const subtotal = (props.amount).toLocaleString('en-US', {
     minimumFractionDigits: 2,
@@ -33,7 +41,8 @@ export const Billing = (props) => {
 
   const handleCheckOutClick = () => {
     // checkout();
-    navigate("/checkout");
+    // navigate("/checkout");
+    setCheckoutBtn(!checkoutBtn);
   };
 
 
@@ -61,12 +70,41 @@ export const Billing = (props) => {
 
       </div>
 
-      <div className="bill-address">
-        <Address setAddress={setSelectedAddress} /> {/* Pass setAddress function to Address component */}
+      <div className="address">
+      <div className="enter-address">
+        Enter Address
+      </div>
+      <div className="address-input">
+        <div className='add-label'>
+          <label className='address-label' >Name:</label>
+          <input  className='label-input' type="text" value={name} onChange={(e) => setName(e.target.value)} />
+        </div>
+        <div className='add-label'>
+          <label className='address-label' >Street Name:</label>
+          <input  className='label-input' type="text" value={streetName} onChange={(e) => setStreetName(e.target.value)} />
+        </div>
+        <div className='add-label'>
+          <label className='address-label' >City:</label>
+          <input  className='label-input' type="text" value={city} onChange={(e) => setCity(e.target.value)} />
+        </div>
+        <div className='add-label'>
+          <label className='address-label' >Pin Code:</label>
+          <input  className='label-input' type="text" value={pinCode} onChange={(e) => setPinCode(e.target.value)} />
+        </div>
+        <div className='add-label'>
+          <label className='address-label' >State:</label>
+          <input  className='label-input' type="text" value={state} onChange={(e) => setState(e.target.value)} />
+        </div>
+        <div className='add-label'>
+          <label className='address-label' >Country:</label>
+          <input  className='label-input' type="text" value={country} onChange={(e) => setCountry(e.target.value)} />
+        </div>
+        
+      </div>
       </div>
 
       <div className="bill-payment" >
-        <PaymentOption />
+        <PaymentOption setPayment={setSelectedPayment} />
       </div>
 
       <div className="checkout-div">
@@ -75,9 +113,26 @@ export const Billing = (props) => {
         </button>  
       </div>
 
-      {/* {
-        <CheckOut selectedAddress={selectedAddress} taxes= {taxes} total={total} />
-      } */}
+      
+
+      { checkoutBtn &&
+      <div className="checkout-class" >
+        <CheckOut 
+            selectedPayment={selectedPayment} 
+            taxes= {taxes} 
+            total={total} 
+            name={name}
+            streetName={streetName}
+            city={city}
+            pinCode={pinCode}
+            state={state}
+            country={country}
+            subtotal={subtotal}
+
+            
+        /> 
+      </div>
+      }
       
 
     </div>

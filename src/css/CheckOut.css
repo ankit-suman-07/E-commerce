@@ -1,10 +1,76 @@
-.checkout {
-    min-height: calc(100vh - 100px);
-    width: 100%;
-    
+.checkout-comp {
+    /* border: 2px solid black; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.select-payment {
-   
+.checkout-salute {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.checkout-welcome {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+}
+
+.checkout-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.checkout-desc {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    padding-left: 15px;
+}
+
+table {
     border: 2px solid black;
+    margin: 10px;
+}
+
+tr {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px;
+}
+
+.table-left {
+    font-family: 'Poppins', sans-serif;
+    
+    font-size: 12px;
+}
+
+.table-right {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.table-total {
+    border-top: 2px solid #222222;
+    font-weight: 600;
+}
+
+.continue-btn{
+    border: 2px solid #222222;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #ffff;
+    transition: 0.3s;
+}
+
+.continue-btn:hover {
+    background-color: #222222;
+    color: #ffff;
+    letter-spacing: 2px;
 }

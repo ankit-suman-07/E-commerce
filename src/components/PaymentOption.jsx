@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "../css/PaymentOption.css";
 
-export const PaymentOption = () => {
+export const PaymentOption = ({setPayment}) => {
     const [pay, setPay] = useState("");
 
   const pay_1 = "Credit Card";
@@ -12,6 +12,7 @@ export const PaymentOption = () => {
   const handleAddressChange = (event) => {
     const selectedPay = event.target.value;
     setPay(selectedPay);
+    setPayment(selectedPay);
   };
 
   
