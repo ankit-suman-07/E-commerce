@@ -31,16 +31,28 @@ export const Shop = () => {
               All
           </button>
           <button
-            className={activeButton === "rare" ? "active-filter" : "rare"}
-              onClick={() => handleFilterChange("rare")}
+            className={activeButton === "jet" ? "active-filter" : "jet"}
+              onClick={() => handleFilterChange("jet")}
               >
-              Rare
+              Jet
           </button>
           <button
             className={activeButton === "island" ? "active-filter" : "island"}
               onClick={() => handleFilterChange("island")}
               >
               island
+          </button>
+          <button
+            className={activeButton === "yacht" ? "active-filter" : "yacht"}
+              onClick={() => handleFilterChange("yacht")}
+              >
+              Yacht
+          </button>
+          <button
+            className={activeButton === "rare" ? "active-filter" : "rare"}
+              onClick={() => handleFilterChange("rare")}
+              >
+              Rare
           </button>
         </div>
         <div className="search-div">

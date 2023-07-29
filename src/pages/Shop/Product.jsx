@@ -54,11 +54,11 @@ export const Product = (props) => {
         <span className="prod-time">
           Order within <b>{timeVal}</b> minutes
         </span>
-        <span className="prod-date"> and get it by <b>{dateVal}</b></span>
-        <span className="prod-rating"> Rating: {rating}</span>
+        <span className="prod-date"> and own it by <b>{dateVal}</b></span>
+        {/* <span className="prod-rating"> Rating: {rating}</span> */}
         <Rating  rating={rating} />
         <span className="prod-owner">
-          Also owned by <b>{owner}</b>
+          Also owned by <span className="owner" >{owner}</span>
         </span>
           
         <button onClick={() => (handleBtnClick())} className="prod-btn" >
