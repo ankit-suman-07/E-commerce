@@ -1,13 +1,12 @@
 import demo from "../assets/demo.jpg";
 
+
 export const PRODUCTS = [
     {
         id: 1,
         productName: "IPhone",
         price: 912399.765,
         productImage: demo,
-        timeLimit: "56",
-        delDate: "12/34/5",
         owner: "Bill Gates",
         rating: 4.2,
         tags: ["all", "", "island", ""],

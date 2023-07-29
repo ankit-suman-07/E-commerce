@@ -3,9 +3,10 @@ import { ShopContext } from "../../context/ShopContext";
 import "../../css/CartItem.css";
 
 export const CartItem = (props) => {
-  const { id, productName, price, productImage, delDate } = props.data;
-  const { cartItems, addToCart, removeFromCart, updateCartItemCount } =
+  const { id, productName, price, productImage } = props.data;
+  const { cartItems, addToCart, removeFromCart, updateCartItemCount, date } =
     useContext(ShopContext);
+    
 
     
     const formattedValue = (price * cartItems[id]).toLocaleString('en-US', {
@@ -25,7 +26,7 @@ export const CartItem = (props) => {
           <span className="cart-prod-ship">Eligible for FREE Shipping</span>
           <span className="cart-prod-return">Return/Replacement within 10 days</span>
           
-          <span className="cart-prod-date"> Delivery by : <b>{delDate}</b></span>
+          <span className="cart-prod-date"> Delivery by : <b>{date[id]}</b></span>
         <div className="count-handler">
           <button onClick={() => removeFromCart(id)} className="alter-btn" > - </button>
           <input

@@ -1,5 +1,5 @@
 .billing {
-    height: calc(100vh - 200px);
+    height: calc(100vh);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
