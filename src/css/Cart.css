@@ -64,3 +64,23 @@
     background-color: #333333;
     color: #ffff;
 }
+
+@media only screen and (max-width: 1000px) {
+    .cart {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .cart-products {
+        width: 100%;    
+    }
+
+    .cart-bill {
+        /* border: 2px solid black; */
+        width: 100%;
+    }
+    
+    .cart {
+        margin: 0 20px 0 10px;
+    }
+}

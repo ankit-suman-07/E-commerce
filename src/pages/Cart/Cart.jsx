@@ -36,7 +36,7 @@ export const Cart = () => {
         </div>
       ) : (
         <div className="empty-cart">
-          <ProductionQuantityLimitsIcon  className="empty-icon" />
+          <ProductionQuantityLimitsIcon  className="empty-icon"  style={{fontSize:"100px"}} />
           <span className="empty-text" >Your cart is Empty.</span>
           <button onClick={() => navigate("/")} className="empty-btn" > Continue Shopping </button>
         </div>

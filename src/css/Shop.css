@@ -67,15 +67,11 @@ color: #ffff;
 }
 
 
-@media only screen and (max-width: 1350px) {
-    .products {
-      grid-template-columns: auto auto;
-    }
-}
   
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
     .products {
       grid-template-columns: auto;
+      margin: 0 5px 0 5px;
     }
 }
 
