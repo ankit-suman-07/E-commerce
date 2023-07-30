@@ -22,22 +22,10 @@ export const Billing = (props) => {
   const [selectedPayment, setSelectedPayment] = useState("");
   const [checkoutBtn, setCheckoutBtn] = useState(false);
 
-  const subtotal = (props.amount).toLocaleString('en-US', {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  });
-  const taxes = (props.amount * 0.03).toLocaleString('en-US', {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  });
-  const charge = (1000).toLocaleString('en-US', {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  });
-  const total = (props.amount + props.amount * 0.03 + 1000).toLocaleString('en-US', {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  });
+  const subtotal = (props.amount).toLocaleString('en-US');
+  const taxes = (props.amount * 0.03).toLocaleString('en-US');
+  const charge = (1000).toLocaleString('en-US');
+  const total = (props.amount + props.amount * 0.03 + 1000).toLocaleString('en-US');
 
   const handleCheckOutClick = () => {
     // checkout();

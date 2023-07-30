@@ -63,7 +63,7 @@ export const Shop = () => {
             className="search-text"
           />
           <button onClick={handleSearch} className="search-btn" >
-            <SearchIcon />  
+            <SearchIcon  className="search-icon" />  
           </button> 
         </div>
       </div>

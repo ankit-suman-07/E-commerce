@@ -78,6 +78,7 @@
 }
 
 .prod-btn:hover {
+    cursor: pointer;
     background-color: orange;
     color: #ffff;
 }
@@ -121,6 +122,33 @@
         width: 65%;
         padding: 3px;
         font-size: 12px;
+    }
+    
+}
+
+
+@media only screen and (max-width: 1000px) {
+
+    .prod-name {
+        justify-content: flex-start;
+        font-size: 15px;
+    }
+    
+    .prod-cost {
+        font-size: 15px;
+        font-weight: 600;
+    }
+    
+    .currency {
+        font-size: 9px;
+    }
+    
+    
+    
+    .prod-btn {
+        width: 65%;
+        padding: 3px;
+        font-size: 10px;
     }
     
 }

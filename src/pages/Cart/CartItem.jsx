@@ -9,12 +9,7 @@ export const CartItem = (props) => {
     
 
     
-    const formattedValue = (price * cartItems[id]).toLocaleString('en-US', {
-      // style: 'currency',
-      // currency: 'USD',
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    });
+    const formattedValue = (price * cartItems[id]).toLocaleString('en-US');
 
   return (
     <div className="cart-item">

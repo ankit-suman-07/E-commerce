@@ -27,7 +27,7 @@ background-color: #333333;
 color: #ffff;
 }
 
-.all:hover, .rare:hover, .island:hover, .jet:hover, .yacht:hover {
+.all:hover, .rare:hover, .island:hover, .jet:hover, .yacht:hover, .active-filter:hover {
   background-color: #333333;
   color: #ffff;
   cursor: pointer;
@@ -51,11 +51,16 @@ color: #ffff;
   height: 100%;
   width: 40px;
   border: 2px solid;
+  font-size: 5px;
   border-radius: 0 10px 10px 0;
+  transition: 0.3;
 }
+
 
 .search-btn:hover {
   cursor: pointer;
+  background-color: #222222;
+  color: #ffff;
 }
 
 .products {
