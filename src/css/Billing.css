@@ -1,5 +1,6 @@
 .billing {
     /* height: calc(100vh); */
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -30,7 +31,7 @@
 }
 
 .address {
-    border: 2px solid #222222;
+    border: 2px solid orange;
     margin: 20px 0 20px 0;
     padding: 10px;
     display: flex;
@@ -42,6 +43,7 @@
 .enter-address {
     font-size: 20px;
     font-weight: 600;
+    color: #6d88a9;
 }
 
 .address-input {
@@ -82,8 +84,8 @@
 
 .checkout-class {
     position: fixed;
-    border: 2px solid black;
-    background-color: #F0F0F0;
+    /* border: 2px solid black; */
+    background-color: #ffff;
     left: 0px;
     top: 0px;
     width: 100%;
@@ -91,4 +93,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.checkout-button {
+    width: 100%;
+    margin: 10px 0 10px 0;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    border: 2px solid #222222;
+    border-radius: 15px;
+    font-size: 14px;
+    background-color: #ffff;
+    transition: 0.3s;
+}
+
+.checkout-button:hover {
+    background-color: #222222;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: #ffff;
 }

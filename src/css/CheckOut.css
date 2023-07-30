@@ -11,6 +11,7 @@
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
     font-weight: 600;
+    color: #806346;
 }
 
 .checkout-welcome {
@@ -19,6 +20,7 @@
     font-weight: 600;
     display: flex;
     justify-content: center;
+    color: #c9a883;
 }
 
 .checkout-title {
@@ -34,7 +36,7 @@
 }
 
 table {
-    border: 2px solid black;
+    border: 2px solid #c9a883;
     margin: 10px;
 }
 

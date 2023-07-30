@@ -16,7 +16,7 @@
   margin-right: 5px;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  background-color: #ffff;
+  background-color: #b2898c;
   border: 2px solid #333333;
   border-radius: 10px;
   transition: 0.5s;
@@ -53,6 +53,7 @@ color: #ffff;
   border: 2px solid;
   font-size: 5px;
   border-radius: 0 10px 10px 0;
+  background-color: #6d88a9;
   transition: 0.3;
 }
 

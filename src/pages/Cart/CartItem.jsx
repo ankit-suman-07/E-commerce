@@ -21,7 +21,7 @@ export const CartItem = (props) => {
           <span className="cart-prod-ship">Eligible for FREE Shipping</span>
           <span className="cart-prod-return">Return/Replacement within 10 days</span>
           
-          <span className="cart-prod-date"> Delivery by : <b>{date[id]}</b></span>
+          <span className="cart-prod-date"> Ownership transfer by : <b>{date[id]}</b></span>
         <div className="count-handler">
           <button onClick={() => removeFromCart(id)} className="alter-btn" > - </button>
           <input

@@ -16,14 +16,15 @@ export const Navbar = () => {
                 <Link to="/" className="link-nav" >Billionaire's Cart</Link>
             </div>
             
-            <div className="nav-cart" >
-                <Link to="/cart" className="link-nav" > 
+            <div>
+                <Link to="/cart" className="nav-cart" > 
                     <ShoppingCartIcon style={{ fontSize: "32px" }} className="link-nav"  /> 
+                    <div className="cart-count" >
+                        { totalCount }
+                    </div>
                 </Link>
             </div>
-            <div className="cart-count" >
-                { totalCount }
-            </div>
+            
             
         </div>
     );

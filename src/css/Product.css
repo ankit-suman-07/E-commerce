@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 .product-card {
-    border: 2px solid #333333;
+    /* border: 2px solid #333333; */
     /* margin: 0 50px 10px 50px; */
     display: flex;  
     font-family: 'Poppins', sans-serif; 
     border-radius: 2px; 
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .product-image {
@@ -36,7 +37,7 @@
     /* border: 1px solid black; */
     font-size: 20px;
     font-weight: 600;
-    border-bottom: 2px solid grey;
+    border-bottom: 2px solid #a85a61;
 }
 
 .prod-cost {
@@ -51,6 +52,7 @@
     display: flex;
     padding-right: 5px;
     margin-top: 5px;
+    color: orange;
     /* border: 1px solid black; */
 }
 

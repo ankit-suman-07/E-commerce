@@ -27,10 +27,31 @@ export const Billing = (props) => {
   const charge = (1000).toLocaleString('en-US');
   const total = (props.amount + props.amount * 0.03 + 1000).toLocaleString('en-US');
 
-  const handleCheckOutClick = () => {
-    // checkout();
-    // navigate("/checkout");
-    setCheckoutBtn(!checkoutBtn);
+  // const handleCheckOutClick = () => {
+  //   // checkout();
+  //   // navigate("/checkout");
+    
+  //   if (name == "" || streetName == "" || city == "" || pinCode == "" || state == "" || country == "" || selectedPayment == "")
+  //     setCheckoutBtn(checkoutBtn);
+  //   else 
+  //     setCheckoutBtn(!checkoutBtn);
+  // };
+
+  const handleCheckOutClick = (event) => {
+    event.preventDefault(); // Prevent form submission
+    if (
+      name === "" ||
+      streetName === "" ||
+      city === "" ||
+      pinCode === "" ||
+      state === "" ||
+      country === "" ||
+      selectedPayment === ""
+    ) {
+      setCheckoutBtn(false); // Set to false if any of the fields are empty
+    } else {
+      setCheckoutBtn(true); // Set to true if all the fields are filled
+    }
   };
 
 
@@ -55,40 +76,39 @@ export const Billing = (props) => {
           <span>Total :</span>
           <span> $ {total}</span>
         </div>
-
       </div>
-
+      <form onSubmit={handleCheckOutClick} >
       <div className="address">
-      <div className="enter-address">
-        Enter Address
-      </div>
-      <div className="address-input">
-        <div className='add-label'>
-          <label className='address-label' >Name:</label>
-          <input  className='label-input' type="text" value={name} onChange={(e) => setName(e.target.value)} />
+        <div className="enter-address">
+          Enter Address
         </div>
-        <div className='add-label'>
-          <label className='address-label' >Street Name:</label>
-          <input  className='label-input' type="text" value={streetName} onChange={(e) => setStreetName(e.target.value)} />
-        </div>
-        <div className='add-label'>
-          <label className='address-label' >City:</label>
-          <input  className='label-input' type="text" value={city} onChange={(e) => setCity(e.target.value)} />
-        </div>
-        <div className='add-label'>
-          <label className='address-label' >Pin Code:</label>
-          <input  className='label-input' type="text" value={pinCode} onChange={(e) => setPinCode(e.target.value)} />
-        </div>
-        <div className='add-label'>
-          <label className='address-label' >State:</label>
-          <input  className='label-input' type="text" value={state} onChange={(e) => setState(e.target.value)} />
-        </div>
-        <div className='add-label'>
-          <label className='address-label' >Country:</label>
-          <input  className='label-input' type="text" value={country} onChange={(e) => setCountry(e.target.value)} />
-        </div>
+        <div className="address-input">
+          <div className='add-label'>
+            <label className='address-label' >Name:</label>
+            <input  className='label-input' type="text" value={name} onChange={(e) => setName(e.target.value)} required />
+          </div>
+          <div className='add-label'>
+            <label className='address-label' >Street Name:</label>
+            <input  className='label-input' type="text" value={streetName} onChange={(e) => setStreetName(e.target.value)} required />
+          </div>
+          <div className='add-label'>
+            <label className='address-label' >City:</label>
+            <input  className='label-input' type="text" value={city} onChange={(e) => setCity(e.target.value)} required />
+          </div>
+          <div className='add-label'>
+            <label className='address-label' >Pin Code:</label>
+            <input  className='label-input' type="text" value={pinCode} onChange={(e) => setPinCode(e.target.value)} required />
+          </div>
+          <div className='add-label'>
+            <label className='address-label' >State:</label>
+            <input  className='label-input' type="text" value={state} onChange={(e) => setState(e.target.value)} required />
+          </div>
+          <div className='add-label'>
+            <label className='address-label' >Country:</label>
+            <input  className='label-input' type="text" value={country} onChange={(e) => setCountry(e.target.value)} required />
+          </div>
         
-      </div>
+        </div>
       </div>
 
       <div className="bill-payment" >
@@ -96,10 +116,12 @@ export const Billing = (props) => {
       </div>
 
       <div className="checkout-div">
-        <button onClick={handleCheckOutClick}> {/* Use the callback function for onClick */}
+        <button type="submit" onClick={handleCheckOutClick} className="checkout-button" >
           CheckOut
         </button>  
+        
       </div>
+      </form>
 
       
 
@@ -116,7 +138,7 @@ export const Billing = (props) => {
             state={state}
             country={country}
             subtotal={subtotal}
-
+            
             
         /> 
       </div>
