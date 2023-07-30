@@ -69,8 +69,11 @@ export const Shop = () => {
       </div>
       <div className="products">
         {
+          
           PRODUCTS.map((product) => {
-            if((product.tags).includes(filter) && (product.productName).includes(searchFilter)) {
+            const lowerCaseFilter = searchFilter.toLowerCase();
+            const lowecasename = (product.productName).toLowerCase();
+            if((product.tags).includes(filter) && lowecasename.includes(lowerCaseFilter)) {
                 return (
                   <Product data={product} />
                 );
