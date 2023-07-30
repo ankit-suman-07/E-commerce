@@ -4,7 +4,6 @@
 }
 
 .filter-search {
-  /* border: 1px solid black; */
   display: flex;
   justify-content: space-between;
   margin: 10px 20px 10px 20px;
@@ -73,5 +72,56 @@ color: #ffff;
       grid-template-columns: auto;
       margin: 0 5px 0 5px;
     }
+
+
+}
+
+@media only screen and (max-width: 700px) {
+  .products {
+    grid-template-columns: auto;
+    margin: 0 5px 0 5px;
+  }
+
+  .filter-search {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .sort-btn {
+    width: 90%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  .all, .rare, .island, .jet, .yacht, .active-filter {
+    width: 50px;
+    border-radius: 3px;
+    font-size: 12px;
+  }
+
+  .active-filter {
+    background-color: #333333;
+    color: #ffff;
+    }
+
+    .search-text {
+      height: auto;
+      border-radius: 3px 0 0 3px;
+      border: 2px solid black;
+    }
+    
+    
+    .search-btn {
+      border-radius: 0 3px 3px 0;
+    }
+
 }
 

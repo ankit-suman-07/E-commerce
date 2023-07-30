@@ -78,7 +78,8 @@ const [date, setDate] = useState(getDefaultCart().date);
   };
 
   const checkout = () => {
-    setCartItems(getDefaultCart());
+    // setCartItems(getDefaultCart());
+    window.location.reload();
   };
 
   const contextValue = {

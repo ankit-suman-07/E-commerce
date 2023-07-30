@@ -11,9 +11,10 @@ export const CheckOut = (props) => {
   const navigate = useNavigate();
 
   const handleContinueBtn = () => {
-    checkout();
+    // checkout();
     navigate("/");
     // setCheckoutBtn(!checkoutBtn);
+    window.location.reload();
   };
 
   useEffect(() => {
