@@ -22,12 +22,21 @@
   transition: 0.5s;
 }
 
+.sort-menu {
+  width: 40px;
+  padding: 2px;
+  margin-right: 5px;
+  background-color: #ffff;
+  border-radius: 2px;
+  transition: 0.5s;
+}
+
 .active-filter {
 background-color: #333333;
 color: #ffff;
 }
 
-.all:hover, .rare:hover, .island:hover, .jet:hover, .yacht:hover, .active-filter:hover {
+.all:hover, .rare:hover, .island:hover, .jet:hover, .yacht:hover, .active-filter:hover, .sort-menu:hover {
   background-color: #333333;
   color: #ffff;
   cursor: pointer;
@@ -64,12 +73,47 @@ color: #ffff;
   color: #ffff;
 }
 
+.all-sorts {
+  border: 2px solid gainsboro;
+  position: fixed;
+  width: 150px;
+  height: 160px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: gainsboro;
+  
+}
+
+.all-sort-btn {
+  width: 100%;
+  height: 35px;
+  background-color: #ffff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  transition: 0.5s;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.all-sort-btn:hover {
+  background-color: #333333;
+  color: #ffff;
+  cursor: pointer;
+}
+
 .products {
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 10px;
     margin: 0 20px 0 20px;
 }
+
 
 
   
