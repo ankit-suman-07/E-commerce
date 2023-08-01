@@ -20,25 +20,25 @@ export const Shop = () => {
   };
 
   const sortAscendingAlpha = () => {
-    const sortedData = [...sortArray].sort((a, b) => a.productName.localeCompare(b.productName));
+    const sortedData = [...PRODUCTS].sort((a, b) => a.productName.localeCompare(b.productName));
     setSortedArray(sortedData);
     setPerformSort(false);
   };
 
   const sortDescendingAlpha = () => {
-    const sortedData = [...sortArray].sort((a, b) => b.productName.localeCompare(a.productName));
+    const sortedData = [...PRODUCTS].sort((a, b) => b.productName.localeCompare(a.productName));
     setSortedArray(sortedData);
     setPerformSort(false);
   };
 
   const sortAscendingNumeric = () => {
-    const sortedData = [...sortArray].sort((a, b) => a.price - b.price);
+    const sortedData = [...PRODUCTS].sort((a, b) => a.price - b.price);
     setSortedArray(sortedData);
     setPerformSort(false);
   };
 
   const sortDescendingNumeric = () => {
-    const sortedData = [...sortArray].sort((a, b) => b.price - a.price);
+    const sortedData = [...PRODUCTS].sort((a, b) => b.price - a.price);
     setSortedArray(sortedData);
     setPerformSort(false);
   };
@@ -115,8 +115,7 @@ export const Shop = () => {
         </div>
       </div>
       <div className="products">
-        {performSort
-          ? PRODUCTS.map((product) => {
+        {sortArray.map((product) => {
               const lowerCaseFilter = searchFilter.toLowerCase();
               const lowerCaseName = product.productName.toLowerCase();
               if (product.tags.includes(filter) && lowerCaseName.includes(lowerCaseFilter)) {
@@ -125,9 +124,7 @@ export const Shop = () => {
                 return null;
               }
             })
-          : sortArray.map((product) => {
-              return <Product data={product}  />;
-            })}
+}
       </div>
     </div>
   );
